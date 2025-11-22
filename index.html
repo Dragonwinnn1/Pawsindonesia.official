@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <title id="site-title">Memuat...</title>
+    <meta name="description" content="Memuat deskripsi..." id="meta-description" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="brand" href="#" aria-label="PAWS home" id="brand-link">
+                <img src="" alt="PAWS Streetwear Collective Logo" class="logo-image" /> 
+            </a>
+            
+            <nav class="main-nav" role="navigation">
+                <button class="nav-btn active" data-target="home">Home</button>
+                <button class="nav-btn" data-target="collection">Koleksi</button>
+                <button class="nav-btn" data-target="faq">FAQ</button>
+                <button class="nav-btn" data-target="contact">Kontak</button>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="cart-btn" id="btn-open-cart" aria-label="Keranjang Belanja">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        
+        <section class="section hero-section">
+            <div class="hero-banner">
+                <div class="banner-container" id="banner-container">
+                    </div>
+                </div>
+        </section>
+
+        <section class="section collection-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Koleksi Terbaru</h2>
+                <div class="product-grid" id="product-grid">
+                    <p id="loading-products">Memuat produk...</p>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+    
+    <div class="floating">
+        <a href="#" target="_blank" aria-label="WhatsApp" class="float-wa" id="float-wa-link" title="Hubungi kami via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" target="_blank" aria-label="Telegram" class="float-telegram" id="float-telegram-link" title="Hubungi kami via Telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://instagram.com/pawsfck" target="_blank" aria-label="Instagram" class="float-ig" title="Follow Instagram kami">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <div class="modal" id="modal-cart" aria-hidden="true">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Tutup Keranjang"><i class="fas fa-times"></i></button>
+            <h3><i class="fas fa-shopping-bag"></i> Keranjang Belanja</h3>
+            <div id="cart-items-container">
+                <p id="cart-empty-message">Keranjang Anda kosong.</p>
+                </div>
+            
+            <div id="cart-summary" style="display:none">
+                <div id="summary-subtotal">Subtotal: <span>Rp 0</span></div>
+                <div id="summary-shipping">Ongkos Kirim: <span>Rp 0</span></div>
+                <div class="cart-total">Total: <span id="summary-grandtotal">Rp 0</span></div>
+            </div>
+
+            <form id="checkout-form" style="display:none">
+                <h4>Data Pengiriman</h4>
+                <label>Nama Lengkap <input type="text" id="checkout-name" required /></label>
+                <label>Nomor HP (WhatsApp)<input type="tel" id="checkout-phone" required placeholder="Contoh: 62812345678" /></label>
+                <label>Alamat Lengkap <textarea id="checkout-address" rows="3" required></textarea></label>
+                <label>Catatan (Opsional) <textarea id="checkout-notes" rows="2"></textarea></label>
+                
+                <div class="modal-actions">
+                    <button type="submit" class="btn-primary" id="btn-confirm-checkout">Pesan Sekarang</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <h4>PAWS Streetwear</h4>
+                <p>Fashion minimalis berkualitas tinggi.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#faq">FAQ</a>
+                <a href="#syarat">Syarat & Ketentuan</a>
+                <a href="#kontak">Hubungi Kami</a>
+            </div>
+        </div>
+        <small>&copy; 2025 PAWS Collective. Powered by Google Sheets.</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
